@@ -4,7 +4,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-RESULTS_PATH = "../results/maat_cosmos_full_results.csv"
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+RESULTS_PATH = os.path.join(BASE_DIR, "results", "maat_cosmos_full_results.csv")
 OUTDIR = "../results"
 os.makedirs(OUTDIR, exist_ok=True)
 
