@@ -70,13 +70,11 @@ results/
 CSV outputs\
 atlas grids\
 ridge tables
-
-figures/
-
 phase transition plots\
 atlas visualizations\
 ridge plots\
 3D phase surfaces
+
 
 ------------------------------------------------------------------------
 
