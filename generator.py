@@ -1,6 +1,7 @@
 import random
 
-def generate_sat_instance(n_vars, n_clauses, k=3):
+def generate_sat_instance(n_vars, n_clauses, k=3, rng=None):
+    rng = rng or random
 
     clauses = []
 
@@ -10,8 +11,8 @@ def generate_sat_instance(n_vars, n_clauses, k=3):
 
         for _ in range(k):
 
-            var = random.randint(1, n_vars)
-            sign = random.choice([-1, 1])
+            var = rng.randint(1, n_vars)
+            sign = rng.choice([-1, 1])
 
             clause.append(sign * var)
 

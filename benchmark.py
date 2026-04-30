@@ -1,4 +1,6 @@
 # benchmark.py
+import random
+
 import pandas as pd
 
 from maat_fields import (
@@ -13,12 +15,13 @@ from generator import generate_sat_instance
 from solver import solve_sat
 
 
-def run_benchmark(samples: int, n_vars: int, alpha: float) -> pd.DataFrame:
+def run_benchmark(samples: int, n_vars: int, alpha: float, seed: int | None = None) -> pd.DataFrame:
     rows = []
     n_clauses = int(alpha * n_vars)
+    rng = random.Random(seed) if seed is not None else random
 
     for _ in range(samples):
-        clauses = generate_sat_instance(n_vars, n_clauses)
+        clauses = generate_sat_instance(n_vars, n_clauses, rng=rng)
 
         H = harmony_field(clauses, n_vars)
         B = balance_field(clauses)

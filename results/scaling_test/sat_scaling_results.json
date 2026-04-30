@@ -1,0 +1,52 @@
+{
+  "n_values": [
+    60,
+    90,
+    120,
+    180
+  ],
+  "alpha_values": [
+    3.8,
+    4.1,
+    4.26,
+    4.4,
+    4.8
+  ],
+  "samples_per_cell": 60,
+  "seed": 42,
+  "total_instances": 1200,
+  "correlations": {
+    "pearson_effective_rank": -0.7192717165001133,
+    "spearman_effective_rank": -0.7443609022556391,
+    "pearson_log_det": -0.6673531902351628,
+    "spearman_log_det": -0.8315789473684211,
+    "pearson_log_kappa": -0.8287688586964671,
+    "spearman_log_kappa": -0.8721804511278195,
+    "pearson_V": -0.8070697637757495,
+    "spearman_V": -0.8285714285714286
+  },
+  "within_n_spearman": {
+    "60": {
+      "spearman_V": 0.6,
+      "spearman_log_kappa": 0.5,
+      "spearman_effective_rank": -0.3
+    },
+    "90": {
+      "spearman_V": 0.7,
+      "spearman_log_kappa": -0.7,
+      "spearman_effective_rank": 0.5
+    },
+    "120": {
+      "spearman_V": 0.7,
+      "spearman_log_kappa": 0.4,
+      "spearman_effective_rank": -0.3
+    },
+    "180": {
+      "spearman_V": 0.6,
+      "spearman_log_kappa": -0.3,
+      "spearman_effective_rank": 0.5
+    }
+  },
+  "summary_csv": "/Volumes/MAATSSD/TOE/sat-hardness-atlas/results/scaling_test/sat_scaling_summary.csv",
+  "raw_csv": "/Volumes/MAATSSD/TOE/sat-hardness-atlas/results/scaling_test/sat_scaling_raw.csv"
+}

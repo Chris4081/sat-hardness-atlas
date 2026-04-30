@@ -26,6 +26,7 @@ class MaatCosmosEngine:
         self.variables = CONFIG["variables"]
         self.alphas = CONFIG["alphas"]
         self.output_dir = CONFIG["output_dir"]
+        self.random_seed = CONFIG.get("random_seed", 42)
         os.makedirs(self.output_dir, exist_ok=True)
 
     def run(self):
@@ -34,13 +35,14 @@ class MaatCosmosEngine:
 
         all_results = []
 
-        for alpha in self.alphas:
+        for alpha_index, alpha in enumerate(self.alphas):
             print(f"running alpha = {alpha}")
 
             df = run_benchmark(
                 samples=self.samples,
                 n_vars=self.variables,
                 alpha=float(alpha),
+                seed=self.random_seed + alpha_index,
             )
 
             df["alpha"] = float(alpha)
